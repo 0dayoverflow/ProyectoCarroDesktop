@@ -41,4 +41,5 @@ public class Conexion {
         return con;
     }
 }
-//Test
+//Test Conexion conexion = Conexion.getInstance();
+//Connection con = conexion.getConexion();
