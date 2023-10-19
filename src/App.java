@@ -13,7 +13,8 @@ public class App {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Va a ser solo un test para ver como carga todo en github
+        System.out.print("Hola mundo!");
     }
     
 }
