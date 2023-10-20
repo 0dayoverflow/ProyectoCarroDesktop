@@ -1,22 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package Vista;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author monster
- */
+
 public class frmLogin extends javax.swing.JFrame {
 
-    /**
-     * Creates new form frmLogin
-     */
+
     public frmLogin() {
         initComponents();
+        this.setResizable(false);
+        this.setTitle("Login De Usuario+");
     }
 
     /**
