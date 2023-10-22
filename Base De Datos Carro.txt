@@ -1,0 +1,64 @@
+-- Tabla para clientes
+CREATE TABLE `cliente` (
+  `ID_cliente` int(11) NOT NULL,
+  `nombre` varchar(255) DEFAULT NULL,
+  `direccion` varchar(255) DEFAULT NULL,
+  `telefono` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`ID_cliente`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Tabla para autos
+CREATE TABLE `auto` (
+  `vin` varchar(17) NOT NULL,
+  `marca` varchar(50) DEFAULT NULL,
+  `modelo` varchar(50) DEFAULT NULL,
+  `cliente_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`vin`),
+  FOREIGN KEY (`cliente_id`) REFERENCES `cliente`(`ID_cliente`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Tabla para servicios
+CREATE TABLE `servicio` (
+  `id_servicio` int(11) NOT NULL,
+  `folio` varchar(100) NOT NULL,
+  `nombre` varchar(100) DEFAULT NULL,
+  `descripcion` text DEFAULT NULL,
+  `fecha_servicio` varchar(200) NOT NULL,
+  `hora_servicio` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_servicio`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Tabla para relacionar autos y servicios con su estatus
+CREATE TABLE `servicioporauto` (
+  `id` int(11) NOT NULL,
+  `auto_vin` varchar(17) DEFAULT NULL,
+  `servicio_id` int(11) DEFAULT NULL,
+  `estatus` varchar(50) DEFAULT NULL,
+  `cliente_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`auto_vin`) REFERENCES `auto`(`vin`),
+  FOREIGN KEY (`servicio_id`) REFERENCES `servicio`(`id_servicio`),
+  FOREIGN KEY (`cliente_id`) REFERENCES `cliente`(`ID_cliente`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Tabla para refacciones utilizadas en servicios
+CREATE TABLE `refaccion` (
+  `id_refaccion` int(11) NOT NULL,
+  `nombre` varchar(100) DEFAULT NULL,
+  `descripcion` text DEFAULT NULL,
+  PRIMARY KEY (`id_refaccion`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Tabla para relacionar autos, servicios, y refacciones utilizadas
+CREATE TABLE `refaccionporauto` (
+  `id` int(11) NOT NULL,
+  `auto_vin` varchar(17) DEFAULT NULL,
+  `servicio_id` int(11) DEFAULT NULL,
+  `refaccion_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`auto_vin`) REFERENCES `auto`(`vin`),
+  FOREIGN KEY (`servicio_id`) REFERENCES `servicio`(`id_servicio`),
+  FOREIGN KEY (`refaccion_id`) REFERENCES `refaccion`(`id_refaccion`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
