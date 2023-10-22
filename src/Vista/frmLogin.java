@@ -2,6 +2,8 @@
 package Vista;
 
 import javax.swing.JOptionPane;
+import Controlador.ctrl_login;
+import Modelo.Login;
 
 
 public class frmLogin extends javax.swing.JFrame {
@@ -27,6 +29,7 @@ public class frmLogin extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btnLogin = new javax.swing.JButton();
         txtPass = new javax.swing.JPasswordField();
+        btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,25 +44,37 @@ public class frmLogin extends javax.swing.JFrame {
             }
         });
 
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap(117, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(9, 9, 9)))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtUsuario)
-                            .addComponent(txtPass))))
-                .addGap(112, 112, 112))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel2)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel1)
+                                        .addGap(9, 9, 9)))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtUsuario)
+                                    .addComponent(txtPass))))
+                        .addGap(112, 112, 112))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnSalir)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -74,15 +89,24 @@ public class frmLogin extends javax.swing.JFrame {
                     .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnLogin)
-                .addGap(93, 93, 93))
+                .addGap(64, 64, 64)
+                .addComponent(btnSalir)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-
+        System.out.println("");
+        
     }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        // TODO add your handling code here:
+                System.exit(0);
+
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -121,6 +145,7 @@ public class frmLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPasswordField txtPass;
@@ -129,7 +154,11 @@ public class frmLogin extends javax.swing.JFrame {
 
     
     private void Login (){
-        if(txtUsuario.getText().isEmpty() &&  !txtPass.getText().isEmpty()){
+        if(!txtUsuario.getText().isEmpty() &&  !txtPass.getText().isEmpty()){
+            ctrl_login controlLogin = new ctrl_login();
+            Login login = new Login();
+            login.setPassword(txtPass.getText().trim());
+            login.setUser(txtUsuario.getText().trim());
         
         }else{
             JOptionPane.showMessageDialog(null, "Ingrese Sus credenciales");
