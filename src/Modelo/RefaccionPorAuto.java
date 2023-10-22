@@ -23,7 +23,7 @@ public class RefaccionPorAuto {
     }
 
     public Auto getAuto() {
-        return autoS
+        return auto;
     }
 
     public void setAuto(Auto auto) {
