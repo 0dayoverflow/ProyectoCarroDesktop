@@ -31,125 +31,228 @@ public class frmMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        autoAgregar = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        clienteAgregar = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        refaccionAgregar = new javax.swing.JMenuItem();
-        jMenu7 = new javax.swing.JMenu();
-        verDashboard = new javax.swing.JMenuItem();
-        jMenu8 = new javax.swing.JMenu();
-        consultaFolio = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        VerDuenioAuto = new javax.swing.JMenuItem();
-        jMenu6 = new javax.swing.JMenu();
-        cerrarSesion = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
-        servicioXAuto = new javax.swing.JMenuItem();
-        jMenu9 = new javax.swing.JMenu();
-        refaccionXAuto = new javax.swing.JMenuItem();
+        btnCliente = new javax.swing.JButton();
+        btnAuto = new javax.swing.JButton();
+        btnRegresar = new javax.swing.JButton();
+        btnRefaccion = new javax.swing.JButton();
+        btnRefXAuto = new javax.swing.JButton();
+        btnFolios = new javax.swing.JButton();
+        btnServicio = new javax.swing.JButton();
+        btnRefXServicio = new javax.swing.JButton();
+        btnEstadisticas = new javax.swing.JButton();
+        btnSalir1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jMenu1.setText("Auto");
-        jMenu1.setPreferredSize(new java.awt.Dimension(150, 50));
-
-        autoAgregar.setText("Agregar");
-        jMenu1.add(autoAgregar);
-
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Cliente");
-        jMenu2.setPreferredSize(new java.awt.Dimension(150, 50));
-
-        clienteAgregar.setText("Agregar");
-        jMenu2.add(clienteAgregar);
-
-        jMenuBar1.add(jMenu2);
-
-        jMenu3.setText("Refaccion");
-        jMenu3.setPreferredSize(new java.awt.Dimension(150, 50));
-
-        refaccionAgregar.setText("Agregar");
-        jMenu3.add(refaccionAgregar);
-
-        jMenuBar1.add(jMenu3);
-
-        jMenu7.setText("Dashboard");
-        jMenu7.setPreferredSize(new java.awt.Dimension(150, 50));
-
-        verDashboard.setText("Mostrar Datos");
-        jMenu7.add(verDashboard);
-
-        jMenuBar1.add(jMenu7);
-
-        jMenu8.setText("Folio");
-        jMenu8.setPreferredSize(new java.awt.Dimension(150, 50));
-
-        consultaFolio.setText("Consulta");
-        jMenu8.add(consultaFolio);
-
-        jMenuBar1.add(jMenu8);
-
-        jMenu4.setText("Dueño De Auto");
-        jMenu4.setPreferredSize(new java.awt.Dimension(150, 50));
-
-        VerDuenioAuto.setText("Consulta");
-        jMenu4.add(VerDuenioAuto);
-
-        jMenuBar1.add(jMenu4);
-
-        jMenu6.setText("Cerrar Sesion");
-        jMenu6.setPreferredSize(new java.awt.Dimension(150, 50));
-
-        cerrarSesion.setText("Cerrar Sesion");
-        cerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+        btnCliente.setText("Cliente");
+        btnCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cerrarSesionActionPerformed(evt);
+                btnClienteActionPerformed(evt);
             }
         });
-        jMenu6.add(cerrarSesion);
 
-        jMenuBar1.add(jMenu6);
+        btnAuto.setText("Auto");
+        btnAuto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAutoActionPerformed(evt);
+            }
+        });
 
-        jMenu5.setText("Servicio Por Auto");
+        btnRegresar.setText("Regresar");
+        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarActionPerformed(evt);
+            }
+        });
 
-        servicioXAuto.setText("Consultar");
-        jMenu5.add(servicioXAuto);
+        btnRefaccion.setText("Refaccion");
+        btnRefaccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRefaccionActionPerformed(evt);
+            }
+        });
 
-        jMenuBar1.add(jMenu5);
+        btnRefXAuto.setText("Refaccion Por Auto");
+        btnRefXAuto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRefXAutoActionPerformed(evt);
+            }
+        });
 
-        jMenu9.setText("Refaccion Por Auto");
-        jMenu9.setPreferredSize(new java.awt.Dimension(150, 50));
+        btnFolios.setText("Folios");
+        btnFolios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFoliosActionPerformed(evt);
+            }
+        });
 
-        refaccionXAuto.setText("Consultar");
-        jMenu9.add(refaccionXAuto);
+        btnServicio.setText("Servicio");
+        btnServicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnServicioActionPerformed(evt);
+            }
+        });
 
-        jMenuBar1.add(jMenu9);
+        btnRefXServicio.setText("Refaccion Por Servicio");
+        btnRefXServicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRefXServicioActionPerformed(evt);
+            }
+        });
 
-        setJMenuBar(jMenuBar1);
+        btnEstadisticas.setText("Estadisticas");
+        btnEstadisticas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEstadisticasActionPerformed(evt);
+            }
+        });
+
+        btnSalir1.setText("Salir");
+        btnSalir1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalir1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1307, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnRefXServicio, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(66, 66, 66)
+                .addComponent(btnRefXAuto, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(359, 359, 359))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addComponent(btnAuto, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(53, 53, 53)
+                        .addComponent(btnCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(89, 89, 89)
+                        .addComponent(btnRefaccion, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(90, 90, 90)
+                        .addComponent(btnServicio, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(140, 140, 140)
+                        .addComponent(btnEstadisticas, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(125, 125, 125)
+                        .addComponent(btnFolios, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(121, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(1186, Short.MAX_VALUE)
+                    .addComponent(btnSalir1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(17, 17, 17)))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAuto, btnCliente, btnEstadisticas, btnFolios, btnRefaccion, btnServicio});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 501, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(87, 87, 87)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAuto, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRefaccion, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnServicio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnFolios, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnEstadisticas, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(93, 93, 93)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRefXAuto, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRefXServicio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(446, Short.MAX_VALUE)
+                    .addComponent(btnSalir1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(16, 16, 16)))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAuto, btnCliente, btnEstadisticas, btnFolios, btnRefaccion, btnServicio});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrarSesionActionPerformed
+    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
+        // TODO add your handling code here:
+        frmLogin login = new frmLogin();
+        login.setVisible(true);
+        this.dispose();
+        
+
+    }//GEN-LAST:event_btnRegresarActionPerformed
+
+    private void btnSalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalir1ActionPerformed
         // TODO add your handling code here:
         System.exit(0);
+    }//GEN-LAST:event_btnSalir1ActionPerformed
 
-    }//GEN-LAST:event_cerrarSesionActionPerformed
+    private void btnAutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAutoActionPerformed
+        // TODO add your handling code here:
+        frmAuto auto = new frmAuto();
+        auto.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnAutoActionPerformed
+
+    private void btnClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClienteActionPerformed
+        // TODO add your handling code here:
+        
+        frmCliente cliente = new frmCliente();
+        cliente.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_btnClienteActionPerformed
+
+    private void btnRefaccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefaccionActionPerformed
+        // TODO add your handling code here:
+        frmRefaccion refaccion = new frmRefaccion();
+        refaccion.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnRefaccionActionPerformed
+
+    private void btnServicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnServicioActionPerformed
+        // TODO add yor handling code here:
+        frmServicio servicio = new frmServicio();
+        servicio.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnServicioActionPerformed
+
+    private void btnEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasActionPerformed
+        // TODO add your handling code here:
+        frmDashboard formEstadisticas = new frmDashboard();
+        formEstadisticas.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnEstadisticasActionPerformed
+
+    private void btnFoliosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFoliosActionPerformed
+        // TODO add your handling code here:
+        frmFolios folios = new frmFolios();
+        folios.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnFoliosActionPerformed
+
+    private void btnRefXServicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefXServicioActionPerformed
+        // TODO add your handling code here:
+        frmRefPorServicio formServicio = new frmRefPorServicio();
+        formServicio.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnRefXServicioActionPerformed
+
+    private void btnRefXAutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefXAutoActionPerformed
+        // TODO add your handling code here:
+        frmServPorAuto refaccionA = new frmServPorAuto();
+        refaccionA.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnRefXAutoActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -184,24 +287,15 @@ public class frmMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem VerDuenioAuto;
-    private javax.swing.JMenuItem autoAgregar;
-    private javax.swing.JMenuItem cerrarSesion;
-    private javax.swing.JMenuItem clienteAgregar;
-    private javax.swing.JMenuItem consultaFolio;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
-    private javax.swing.JMenu jMenu8;
-    private javax.swing.JMenu jMenu9;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem refaccionAgregar;
-    private javax.swing.JMenuItem refaccionXAuto;
-    private javax.swing.JMenuItem servicioXAuto;
-    private javax.swing.JMenuItem verDashboard;
+    private javax.swing.JButton btnAuto;
+    private javax.swing.JButton btnCliente;
+    private javax.swing.JButton btnEstadisticas;
+    private javax.swing.JButton btnFolios;
+    private javax.swing.JButton btnRefXAuto;
+    private javax.swing.JButton btnRefXServicio;
+    private javax.swing.JButton btnRefaccion;
+    private javax.swing.JButton btnRegresar;
+    private javax.swing.JButton btnSalir1;
+    private javax.swing.JButton btnServicio;
     // End of variables declaration//GEN-END:variables
 }
