@@ -1,18 +1,18 @@
-
 package Vista;
 
+import Controlador.Ctrl_Usuario;
+import Modelo.Usuario;
 import javax.swing.JOptionPane;
-import Controlador.ctrl_login;
-import Modelo.Login;
-
 
 public class frmLogin extends javax.swing.JFrame {
 
-
     public frmLogin() {
+
         initComponents();
         this.setResizable(false);
-        this.setTitle("Login De Usuario+");
+        this.setTitle("Login- Sitemas de ventas");
+        this.setLocationRelativeTo(null);
+
     }
 
     /**
@@ -99,12 +99,14 @@ public class frmLogin extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         System.out.println("");
-        
+        this.login();
+
+
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         // TODO add your handling code here:
-                System.exit(0);
+        System.exit(0);
 
     }//GEN-LAST:event_btnSalirActionPerformed
 
@@ -144,30 +146,35 @@ public class frmLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnLogin;
-    private javax.swing.JButton btnSalir;
+    public javax.swing.JButton btnLogin;
+    public javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPasswordField txtPass;
-    private javax.swing.JTextField txtUsuario;
+    public javax.swing.JPasswordField txtPass;
+    public javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 
-    
-    private void Login (){
-        if(!txtUsuario.getText().isEmpty() &&  !txtPass.getText().isEmpty()){
-            ctrl_login controlLogin = new ctrl_login();
-            Login login = new Login();
-            login.setPassword(txtPass.getText().trim());
-            login.setUser(txtUsuario.getText().trim());
-        
-        }else{
-            JOptionPane.showMessageDialog(null, "Ingrese Sus credenciales");
-        
-        }
+    private void login() {
+        if (!txtUsuario.getText().isEmpty() && !txtPass.getText().isEmpty()) {
+            Usuario usuario = new Usuario();
+            Ctrl_Usuario controlUsuario = new Ctrl_Usuario();
 
-    
+            usuario.setUsuario(txtUsuario.getText().trim());
+            usuario.setContrasena(txtPass.getText().trim());
+            if (controlUsuario.loginUser(usuario)) {
+                JOptionPane.showMessageDialog(null, "Datos Correctos");
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Usuario o clave incorrecto");
+
+            }//Fin de validar login
+
+        } else {
+            //Si no ingreso los datos
+            JOptionPane.showMessageDialog(null, "ingrese sus credenciales");
+
+        }//fin verficar lso daots
+
     }
 
-
 }
-

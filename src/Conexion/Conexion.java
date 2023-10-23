@@ -1,4 +1,4 @@
-package Modelo;
+package Conexion;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ public class Conexion {
     private static Conexion instance;
     private Connection con;
 
-    private String base = "autos";
+    private String base = "taller1";
     private String user = "root";
     private String password = "";
     private String url = "jdbc:mysql://localhost:3306/" + base;
