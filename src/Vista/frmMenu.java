@@ -1,15 +1,25 @@
-
 package Vista;
 
 import java.awt.Dimension;
+import javax.swing.JDesktopPane;
 
 public class frmMenu extends javax.swing.JFrame {
+
+    public static JDesktopPane jDesktopPane_menu;
 
     public frmMenu() {
         initComponents();
         this.setSize(new Dimension(1200, 700));
         this.setTitle("Menu Principal");
         this.setLocationRelativeTo(null);
+        this.setLayout(null);
+        jDesktopPane_menu = new JDesktopPane();
+
+        int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
+        int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
+        this.jDesktopPane_menu.setBounds(0, 0, ancho, (alto - 110));
+        this.add(jDesktopPane_menu);
+
     }
 
     /**
@@ -21,40 +31,125 @@ public class frmMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnSalir = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        autoAgregar = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        clienteAgregar = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        refaccionAgregar = new javax.swing.JMenuItem();
+        jMenu7 = new javax.swing.JMenu();
+        verDashboard = new javax.swing.JMenuItem();
+        jMenu8 = new javax.swing.JMenu();
+        consultaFolio = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        VerDuenioAuto = new javax.swing.JMenuItem();
+        jMenu6 = new javax.swing.JMenu();
+        cerrarSesion = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
+        servicioXAuto = new javax.swing.JMenuItem();
+        jMenu9 = new javax.swing.JMenu();
+        refaccionXAuto = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnSalir.setText("Salir");
-        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+        jMenu1.setText("Auto");
+        jMenu1.setPreferredSize(new java.awt.Dimension(150, 50));
+
+        autoAgregar.setText("Agregar");
+        jMenu1.add(autoAgregar);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Cliente");
+        jMenu2.setPreferredSize(new java.awt.Dimension(150, 50));
+
+        clienteAgregar.setText("Agregar");
+        jMenu2.add(clienteAgregar);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Refaccion");
+        jMenu3.setPreferredSize(new java.awt.Dimension(150, 50));
+
+        refaccionAgregar.setText("Agregar");
+        jMenu3.add(refaccionAgregar);
+
+        jMenuBar1.add(jMenu3);
+
+        jMenu7.setText("Dashboard");
+        jMenu7.setPreferredSize(new java.awt.Dimension(150, 50));
+
+        verDashboard.setText("Mostrar Datos");
+        jMenu7.add(verDashboard);
+
+        jMenuBar1.add(jMenu7);
+
+        jMenu8.setText("Folio");
+        jMenu8.setPreferredSize(new java.awt.Dimension(150, 50));
+
+        consultaFolio.setText("Consulta");
+        jMenu8.add(consultaFolio);
+
+        jMenuBar1.add(jMenu8);
+
+        jMenu4.setText("Dueño De Auto");
+        jMenu4.setPreferredSize(new java.awt.Dimension(150, 50));
+
+        VerDuenioAuto.setText("Consulta");
+        jMenu4.add(VerDuenioAuto);
+
+        jMenuBar1.add(jMenu4);
+
+        jMenu6.setText("Cerrar Sesion");
+        jMenu6.setPreferredSize(new java.awt.Dimension(150, 50));
+
+        cerrarSesion.setText("Cerrar Sesion");
+        cerrarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalirActionPerformed(evt);
+                cerrarSesionActionPerformed(evt);
             }
         });
+        jMenu6.add(cerrarSesion);
+
+        jMenuBar1.add(jMenu6);
+
+        jMenu5.setText("Servicio Por Auto");
+
+        servicioXAuto.setText("Consultar");
+        jMenu5.add(servicioXAuto);
+
+        jMenuBar1.add(jMenu5);
+
+        jMenu9.setText("Refaccion Por Auto");
+        jMenu9.setPreferredSize(new java.awt.Dimension(150, 50));
+
+        refaccionXAuto.setText("Consultar");
+        jMenu9.add(refaccionXAuto);
+
+        jMenuBar1.add(jMenu9);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(303, Short.MAX_VALUE)
-                .addComponent(btnSalir)
-                .addGap(25, 25, 25))
+            .addGap(0, 1307, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(262, Short.MAX_VALUE)
-                .addComponent(btnSalir)
-                .addGap(15, 15, 15))
+            .addGap(0, 501, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+    private void cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrarSesionActionPerformed
+        // TODO add your handling code here:
         System.exit(0);
-    }//GEN-LAST:event_btnSalirActionPerformed
+
+    }//GEN-LAST:event_cerrarSesionActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -89,6 +184,24 @@ public class frmMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSalir;
+    private javax.swing.JMenuItem VerDuenioAuto;
+    private javax.swing.JMenuItem autoAgregar;
+    private javax.swing.JMenuItem cerrarSesion;
+    private javax.swing.JMenuItem clienteAgregar;
+    private javax.swing.JMenuItem consultaFolio;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
+    private javax.swing.JMenu jMenu9;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem refaccionAgregar;
+    private javax.swing.JMenuItem refaccionXAuto;
+    private javax.swing.JMenuItem servicioXAuto;
+    private javax.swing.JMenuItem verDashboard;
     // End of variables declaration//GEN-END:variables
 }

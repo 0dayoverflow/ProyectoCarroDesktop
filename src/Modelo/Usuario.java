@@ -1,8 +1,5 @@
 package Modelo;
 
-/**
-Atributos de la clase usuarios
- */
 public class Usuario {
     
     private String usuario;
